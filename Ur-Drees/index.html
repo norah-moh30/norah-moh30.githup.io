@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تسجيل الدخول - Ur Dress</title>
+<style>
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #f7f7f7;
+padding: 50px;
+text-align: center;
+}
+
+.login-box {
+background-color: white;
+width: 400px;
+margin: auto;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+transform: scale(1.02);
+}
+
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #f9f9f9;
+font-size: 16px;
+}
+
+button {
+width: 100%;
+padding: 14px;
+background-color: #009688;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 18px;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #00796b;
+}
+
+.signup-link {
+font-size: 14px;
+margin-top: 10px;
+}
+
+.signup-link a {
+color: #009688;
+text-decoration: none;
+}
+
+.signup-link a:hover {
+text-decoration: underline;
+}
+
+/* تنسيق الصورة */
+.logo {
+width: 180px; /* تحديد عرض الصورة */
+height:auto ;
+margin-bottom: 20px; /* ترك مسافة تحت الصورة */
+}
+</style>
+</head>
+<body>
+
+<div class="login-box">
+<!-- إضافة اللوجو هنا -->
+<img src="logo.png.jpeg" alt="Logo" class="logo">
+
+<h2>تسجيل الدخول</h2>
+<input type="email" placeholder="البريد الإلكتروني" required>
+<input type="password" placeholder="كلمة المرور" required>
+<button onclick="window.location.href = 'home.html';">تسجيل الدخول</button>
+
+<div class="signup-link">
+ليس لديك حساب؟ <a href="signup.html">سجّل من هنا</a>
+</div>
+</div>
+
+</body>
+</html>

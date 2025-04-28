@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>عرض المنتجات - Ur Dress</title>
+<style>
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #f2f2f2;
+margin: 0;
+padding: 20px;
+text-align: center;
+}
+
+h1 {
+color: #333;
+}
+
+.products-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin-top: 30px;
+}
+
+.product-card {
+background-color: white;
+width: 250px;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+transition: transform 0.2s;
+}
+
+.product-card:hover {
+transform: scale(1.03);
+}
+
+.product-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+.product-card h3 {
+margin: 10px 0 5px;
+}
+
+.product-card p {
+margin: 5px 0;
+color: #555;
+}
+
+.product-card button {
+margin-top: 10px;
+background-color: #009688;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.product-card button:hover {
+background-color: #00796b;
+}
+</style>
+</head>
+<body>
+
+<h1>منتجاتنا</h1>
+
+<div class="products-container">
+
+<!-- المنتج الأول -->
+<div class="product-card">
+<img src="tshirt1.jpg" alt="تيشيرت">
+<h3>تيشيرت</h3>
+<p>المقاس: M</p>
+<p>جديدة</p>
+<p>السعر: 50 ريال</p>
+<button>أضف إلى السلة</button>
+</div>
+
+<!-- المنتج الثاني -->
+<div class="product-card">
+    <img src="dress1.jpg" alt="فستان أنيق">
+    <h3>فستان أسود أنيق</h3>
+    <p>المقاس: L</p>
+    <p>مستعمله</p>
+    <p>السعر: 120 ريال</p>
+    <button>أضف إلى السلة</button>
+    </div>
+
+<!-- المنتج الثالث -->
+<div class="product-card">
+    <img src="jacket1.jpg" alt="جاكيت">
+    <h3>جاكيت</h3>
+    <p>المقاس: XL</p>
+    <p>السعر: 180 ريال</p>
+    <button onclick="addToCart('جاكيت', 180, 'assets/product-images/jacket1.jpg')">
+        أضف إلى السلة
+        </button>
+   
+    </div>
+<!-- المنتج الرابع -->
+<div class="product">
+<img src="tshirt2.webp" alt="تيشيرت" style="width: 200px;">
+<h3>تيشيرت</h3>
+<p>المقاس: XXL</p>
+<p>نظيف-مستعمله</p>
+<p>السعر: 50 ريال</p>
+<button onclick="addToCart(
+'تيشيرت',
+90,
+'assets/product-images/tshirt1.jpg'
+)">أضف إلى السلة</button>
+</div>
+    <script>
+    // مصفوفة لحفظ المنتجات اللي انضافت للسلة
+    let cart = [];
+    
+    function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    alert("تم إضافة المنتج إلى السلة!");
+    console.log(cart); // عشان تتأكدين إنه ينضاف بالكونسول
+    }
+    </script>    
+    
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>عرض المنتجات - Ur Dress</title>
+<style>
+.cart-container {
+padding: 20px;
+background-color: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 400px;
+margin: auto;
+}
+
+.cart-container h2 {
+text-align: center;
+}
+
+#cart-items {
+margin-bottom: 20px;
+}
+
+.cart-item {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+
+button {
+width: 100%;
+padding: 12px;
+background-color: #009688;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #00796b;
+}
+
+#invoice {
+margin-top: 20px;
+padding: 10px;
+background-color: #f1f1f1;
+border-radius: 5px;
+display: none;
+}
+</style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8">
+    <title>عرض المنتجات - Ur Dress</title>
+    <style>
+    .cart-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: auto;
+    }
+    
+    .cart-container h2 {
+    text-align: center;
+    }
+    
+    #cart-items {
+    margin-bottom: 20px;
+    }
+    
+    .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    }
+    
+    button {
+    width: 100%;
+    padding: 12px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    button:hover {
+    background-color: #00796b;
+    }
+    
+    #invoice {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    display: none;
+    }
+    </style>
+    </head>
+    <body>
+    
+    
+</div>
+<script src="scripts/scripts.sj"></script>
+<script>
+    function addToCart(name, price, image) {
+    // جلب السلة من localStorage أو تهيئتها
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    // إضافة المنتج مع مسار الصورة
+    cart.push({ name, price, image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    if (confirm(`تمت إضافة "${name}" إلى السلة.\n\nعرض السلة الآن؟`)) {
+    window.location.href = 'cart.html';
+    }
+    }
+    
+    </script>
+    
+<script>
+    function addToCart(name, price, image) {
+    // 1. جلب السلة أو تهيئتها
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    // 2. إضافة العنصر
+    cart.push({ name, price, image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    // 3. تأكيد وعرض السلة/الفاتورة
+    if (confirm(`تمت إضافة "${name}" إلى السلة.\n\nهل ترغب بعرض الفاتورة الآن؟`)) {
+    window.location.href = 'cart.html';
+    }
+    }
+    </script>
+</body>
+</html>
+

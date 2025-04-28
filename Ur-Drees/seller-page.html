@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>رفع منتج جديد - Ur Dress</title>
+<style>
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #f4f4f9;
+padding: 50px;
+text-align: center;
+}
+
+.form-box {
+background-color: white;
+width: 500px;
+margin: auto;
+padding: 30px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+border-radius: 8px;
+transition: transform 0.3s ease-in-out;
+}
+
+.form-box:hover {
+transform: scale(1.02);
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea,
+input[type="file"] {
+width: 95%;
+padding: 12px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 4px;
+background-color: #f9f9f9;
+font-size: 16px;
+}
+
+button {
+width: 100%;
+padding: 14px;
+background-color: #009688;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 18px;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #00796b;
+}
+
+h2 {
+margin-bottom: 20px;
+font-size: 24px;
+color: #333;
+}
+
+.form-box input, .form-box select, .form-box textarea {
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+<h2>رفع منتج جديد</h2>
+
+<input type="file" accept="image/*" id="productImage" required>
+<input type="text" id="productName" placeholder="اسم المنتج" required>
+<select id="productType" required>
+<option value="" disabled selected>اختر النوع</option>
+<option>تيشيرت</option>
+<option>بنطلون</option>
+<option>فستان</option>
+<option>جاكيت</option>
+<option>عباية</option>
+</select>
+<select id="productCondition" required>
+<option value="" disabled selected>اختر الحالة</option>
+<option>جديدة</option>
+<option>مستعملة - نظيفة</option>
+<option>مستعملة - بها عيوب بسيطة</option>
+</select>
+<input type="text" id="productSize" placeholder="المقاس (مثال: M, L, 38)" required>
+<input type="number" id="productPrice" placeholder="السعر بالريال" required>
+<textarea id="productDescription" rows="3" placeholder="وصف إضافي (اختياري)"></textarea>
+
+<button id="submitProduct">نشر المنتج</button>
+</div>
+
+<script>
+document.getElementById('submitProduct').onclick = function() {
+// جمع البيانات من النموذج
+const name = document.getElementById('productName').value;
+const type = document.getElementById('productType').value;
+const condition = document.getElementById('productCondition').value;
+const size = document.getElementById('productSize').value;
+const price = document.getElementById('productPrice').value;
+const description = document.getElementById('productDescription').value;
+// صورة المنتج (يمكن استخدام placeholder إذا لم يتم رفع صورة)
+const image = document.getElementById('productImage').files[0] ? URL.createObjectURL(document.getElementById('productImage').files[0]) : "https://via.placeholder.com/300";
+
+// تخزين البيانات في localStorage
+let products = JSON.parse(localStorage.getItem("products")) || [];
+products.push({
+name,
+type,
+condition,
+size,
+price,
+description,
+image
+});
+
+localStorage.setItem("products", JSON.stringify(products));
+
+// بعد الحفظ، نقوم بإعادة التوجيه إلى صفحة عرض المنتجات
+window.location.href = "view-products.html";
+};
+</script>
+
+</body>
+</html>

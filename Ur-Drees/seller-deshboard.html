@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>لوحة البائع - Ur Dress</title>
+<style>
+/* نفس التنسيق السابق */
+</style>
+</head>
+<body>
+
+<div class="form-box">
+<h2>رفع قطعة ملابس</h2>
+
+<input type="file" accept="image/*" multiple>
+<input type="text" placeholder="اسم القطعة" required>
+
+<select required>
+<option value="" disabled selected>اختر النوع</option>
+<option>تيشيرت</option>
+<option>بنطلون</option>
+<option>فستان</option>
+<option>جاكيت</option>
+<option>عباية</option>
+</select>
+
+<select required>
+<option value="" disabled selected>اختر الحالة</option>
+<option>جديدة</option>
+<option>مستعملة - نظيفة</option>
+<option>مستعملة - بها عيوب بسيطة</option>
+</select>
+
+<input type="text" placeholder="المقاس (مثال: M, L, 38)">
+<input type="number" placeholder="السعر بالريال" required>
+
+<textarea rows="3" placeholder="وصف إضافي (اختياري)"></textarea>
+
+<button>نشر القطعة</button>
+</div>
+
+</body>
+</html>
